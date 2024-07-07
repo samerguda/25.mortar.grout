@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortar Grout Casting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: green;
+        }
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button-container button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .table-container {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid green;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: green;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #d4edda;
+        }
+        tr:nth-child(odd) {
+            background-color: #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mortar Grout Casting</h1>
+    <div class="button-container">
+        <button onclick="window.print()">Print</button>
+        <button onclick="copyTable()">Copy</button>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr><td>1</td><td>SA3-PLN-CE-0011</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>2</td><td>SA3-PLN-CE-0098</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>3</td><td>SA3-PLN-CE-0123</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>4</td><td>SA3-PLN-CE-0183</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>5</td><td>SA3-PLN-CE-0243</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>6</td><td>SA3-PLN-CE-0269</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>7</td><td>SA3-PLN-CE-0329</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>8</td><td>SA3-PLN-CE-0355</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>9</td><td>SA3-PLN-CE-0381</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>10</td><td>SA3-PLN-CE-0441</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>11</td><td>SA3-PLN-CE-0501</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>12</td><td>SA3-PLN-CE-0528</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>13</td><td>SA3-PLN-CE-0555</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>14</td><td>SA3-PLN-CE-0616</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>15</td><td>SA3-PLN-CE-0643</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>16</td><td>SA3-PLN-CE-0670</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>17</td><td>SA3-PLN-CE-0761</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>18</td><td>SA3-PLN-CE-0825</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>19</td><td>SA3-PLN-CE-0853</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>20</td><td>SA3-PLN-CE-0881</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>21</td><td>SA3-PLN-CE-0944</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>22</td><td>SA3-PLN-CE-0972</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>23</td><td>SA3-PLN-CE-1034</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>24</td><td>SA3-PLN-CE-1092</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+                <tr><td>25</td><td>SA3-PLN-CE-1121</td><td>Mortar grout around the vent to be casted with the approved sleeve</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function copyTable() {
+            const range = document.createRange();
+            range.selectNode(document.getElementById('table-body'));
+            window.getSelection().removeAllRanges(); 
+            window.getSelection().addRange(range); 
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Table copied to clipboard');
+        }
+    </script>
+</body>
+</html>
